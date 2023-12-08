@@ -1,0 +1,18 @@
+import java.awt.Desktop;
+import java.net.URI;
+
+public class BlankBrowser {
+
+    public static void main(String[] args) {
+        openBlankBrowser();
+    }
+
+    private static void openBlankBrowser() {
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            desktop.browse(new URI("about:blank"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
