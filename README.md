@@ -1,2 +1,2 @@
-# Andrew-games-v2
-(better than elliott games) jk there both good
+# Andrew-games-beta-v2
+(better than Elliott games) jk there both good
