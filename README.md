@@ -1,2 +1,3 @@
 # Andrew-games-beta-v2
-(better than Elliott games) jk there both good
+This is my first website. I coded it mostly from scratch.
+PLEASE ENJOY!!!!!!! :)
