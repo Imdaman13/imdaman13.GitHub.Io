@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Blank Browser</title>
+    <title>Redirect to about:blank</title>
     <script>
-        function openBlankBrowser() {
-            window.open('about:blank', '_blank');
-        }
+        window.onload = function () {
+            window.location.replace("about:blank");
+        };
     </script>
 </head>
 <body>
-    <h1>About Blank Browser</h1>
-    <p>Click the button below to open a blank browser window.</p>
-    <button onclick="openBlankBrowser()">Open Blank Browser</button>
+    <!-- Content for the body, if needed -->
 </body>
 </html>
 
