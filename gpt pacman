@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #pacman {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
+            animation: eat-dots 0.5s infinite alternate;
+        }
+
+        @keyframes eat-dots {
+            from {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
+            }
+            to {
+                clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="pacman"></div>
+
+<script>
+    const pacman = document.getElementById('pacman');
+
+    document.addEventListener('keydown', (event) => {
+        movePacman(event.key);
+    });
+
+    function movePacman(direction) {
+        const speed = 10;
+
+        switch (direction) {
+            case 'ArrowUp':
+                pacman.style.top = `${parseFloat(pacman.style.top) - speed}px`;
+                break;
+            case 'ArrowDown':
+                pacman.style.top = `${parseFloat(pacman.style.top) + speed}px`;
+                break;
+            case 'ArrowLeft':
+                pacman.style.left = `${parseFloat(pacman.style.left) - speed}px`;
+                break;
+            case 'ArrowRight':
+                pacman.style.left = `${parseFloat(pacman.style.left) + speed}px`;
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>
